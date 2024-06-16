@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/%7BSolarFrens%7D/static/css/main.b9698d6c.css",
+    "main.js": "/%7BSolarFrens%7D/static/js/main.6760ca07.js",
+    "index.html": "/%7BSolarFrens%7D/index.html",
+    "main.b9698d6c.css.map": "/%7BSolarFrens%7D/static/css/main.b9698d6c.css.map",
+    "main.6760ca07.js.map": "/%7BSolarFrens%7D/static/js/main.6760ca07.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b9698d6c.css",
+    "static/js/main.6760ca07.js"
+  ]
+}
