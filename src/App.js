@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import './App.css'; // Ensure you have this file for custom styles
 
+import './App.css'; // Ensure you have this file for custom styles
 function App() {
   useEffect(() => {
     const handleTelegramInit = () => {
@@ -43,7 +43,7 @@ function App() {
           This is a mini app that runs inside Telegram.
         </p>
         <div className="sun-container">
-          <img src="/SolarFrens/public/smiling_sun.png" alt="Smiling Sun" className="smiling-sun" />
+          <img src={require('./Images/smiling-sun.png')} alt="Smiling Sun" className="smiling-sun" />
         </div>
       </header>
     </div>
