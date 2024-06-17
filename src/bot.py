@@ -4,7 +4,7 @@ from aiogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from aiogram.utils import executor
 
 API_TOKEN = '7168628519:AAHeHNwwu6RMLNjO_juSc9MpOQTlr823XiI'
-WEB_APP_URL = 'http://your-public-url.com'
+WEB_APP_URL = 'https://ommicang.github.io/SolarFrens/'
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
