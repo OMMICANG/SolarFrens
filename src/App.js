@@ -10,6 +10,9 @@ function App() {
 
       // Set the background color based on the Telegram theme
       document.body.style.backgroundColor = webApp.themeParams.bg_color;
+
+      // Expand the Web App to full height
+      webApp.expand();
     }
   }, []);
 
