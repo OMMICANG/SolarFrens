@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import './App.css'; // Ensure you have this file for custom styles
 
 function App() {
   useEffect(() => {
@@ -41,6 +42,9 @@ function App() {
         <p>
           This is a mini app that runs inside Telegram.
         </p>
+        <div className="sun-container">
+          <img src="/smiling-sun.png" alt="Smiling Sun" className="smiling-sun" />
+        </div>
       </header>
     </div>
   );
