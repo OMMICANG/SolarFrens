@@ -56,9 +56,9 @@ function App() {
     <div className="App">
     <header className="App-header">
         <h1>Welcome to SolarFrens</h1>
-        <p>
+        {/* <p>
           This is a mini app that runs inside Telegram.
-        </p>
+        </p> */}
         <div className="image-container">
         {theme === 'dark' ? (
             <img src={require('./Images/dreamy-moon.png')} alt="Dreamy Moon" className="dreamy-moon" />
