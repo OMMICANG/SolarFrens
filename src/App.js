@@ -1,8 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import './App.css'; // Ensure you have this file for custom styles
+import DarkMode from "./DarkMode/DarkMode"
+import "./DarkMode/DarkMode.css"
+import { ReactComponent as Sun } from "./DarkMode/Sun.svg";
+import { ReactComponent as Moon } from "./DarkMode/Moon.svg";
 
 function App() {
   const [theme, setTheme] = useState('dark'); // Initialize theme state
+  const [showSun, setShowSun] = useState(true); // Initialize image state
 
   useEffect(() => {
     const handleTelegramInit = () => {
@@ -50,23 +55,44 @@ function App() {
 
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === 'dark' ? 'light' : 'dark'));
+    setShowSun((prevShowSun) => !prevShowSun);
   };
 
   return (
-    <div className="App">
+    <div className={`App ${theme}-theme`}>
     <header className="App-header">
         <h1>Welcome to SolarFrens</h1>
         {/* <p>
           This is a mini app that runs inside Telegram.
         </p> */}
         <div className="image-container">
-        {theme === 'dark' ? (
+        {showSun ? (
             <img src={require('./Images/dreamy-moon.png')} alt="Dreamy Moon" className="dreamy-moon" />
           ) : (
             <img src={require('./Images/smiling-sun.png')} alt="Smiling Sun" className="smiling-sun" />
           )}
         </div>
-        <button onClick={toggleTheme}>Toggle Theme</button>
+        {/* <button onClick={toggleTheme}>Toggle Theme</button> */}
+        {/* <div className="toggle-container">
+          <div
+            className="toggle-button"
+            style={{ transform: theme === 'dark' ? 'translateX(100%)' : 'translateX(0)' }}
+            onClick={toggleTheme}
+          ></div>
+          </div> */}
+
+        <div className='dark_mode'>
+            <input
+                className='dark_mode_input'
+                type='checkbox'
+                id='darkmode-toggle'
+                onClick={toggleTheme}
+            />
+            <label className='dark_mode_label' for='darkmode-toggle'>
+                <Sun />
+                <Moon />
+            </label>
+        </div>
       </header>
     </div>
   );
