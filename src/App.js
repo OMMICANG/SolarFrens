@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react';
-
+import React, { useEffect, useState } from 'react';
 import './App.css'; // Ensure you have this file for custom styles
+
 function App() {
+  const [theme, setTheme] = useState('dark'); // Initialize theme state
+
   useEffect(() => {
     const handleTelegramInit = () => {
       if (window.Telegram.WebApp) {
@@ -11,7 +13,7 @@ function App() {
         webApp.ready();
 
         // Set the background color based on the Telegram theme
-        document.body.style.backgroundColor = webApp.themeParams.bg_color;
+        // document.body.style.backgroundColor = webApp.themeParams.bg_color;
 
         // Expand the Web App to full height
         webApp.expand();
@@ -35,6 +37,21 @@ function App() {
     };
   }, []);
 
+  useEffect(() => {
+    // Apply theme styles based on the current theme
+    if (theme === 'dark') {
+      document.body.style.backgroundColor = 'black';
+      document.body.style.color = 'white';
+    } else {
+      document.body.style.backgroundColor = 'white';
+      document.body.style.color = 'black';
+    }
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((prevTheme) => (prevTheme === 'dark' ? 'light' : 'dark'));
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -45,6 +62,7 @@ function App() {
         <div className="sun-container">
           <img src={require('./Images/smiling-sun.png')} alt="Smiling Sun" className="smiling-sun" />
         </div>
+        <button onClick={toggleTheme}>Toggle Theme</button>
       </header>
     </div>
   );

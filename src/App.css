@@ -5,6 +5,8 @@ html, body {
   padding: 0;
   height: 100%;
   width: 100%;
+  background-color: black;
+  color: white;
 }
 
 .App {
@@ -15,7 +17,7 @@ html, body {
   min-height: 100vh;
   padding: 20px;
   box-sizing: border-box;
-  background-color: var(--bg-color);
+  /* background-color: var(--bg-color); */
 }
 
 .App-header {
@@ -32,4 +34,18 @@ html, body {
 .smiling-sun {
   width: 150px; /* Adjust size as needed */
   height: auto;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
 }
