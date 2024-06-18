@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/SolarFrens/static/css/main.4393a7d0.css",
-    "main.js": "/SolarFrens/static/js/main.f208acb2.js",
+    "main.css": "/SolarFrens/static/css/main.1df0afb6.css",
+    "main.js": "/SolarFrens/static/js/main.17b2c51a.js",
     "static/media/smiling-sun.png": "/SolarFrens/static/media/smiling-sun.6ad5daab439ed45637fd.png",
     "static/media/dreamy-moon.png": "/SolarFrens/static/media/dreamy-moon.7cd60f05cdd6aa4216ec.png",
     "index.html": "/SolarFrens/index.html",
-    "main.4393a7d0.css.map": "/SolarFrens/static/css/main.4393a7d0.css.map",
-    "main.f208acb2.js.map": "/SolarFrens/static/js/main.f208acb2.js.map"
+    "main.1df0afb6.css.map": "/SolarFrens/static/css/main.1df0afb6.css.map",
+    "main.17b2c51a.js.map": "/SolarFrens/static/js/main.17b2c51a.js.map"
   },
   "entrypoints": [
-    "static/css/main.4393a7d0.css",
-    "static/js/main.f208acb2.js"
+    "static/css/main.1df0afb6.css",
+    "static/js/main.17b2c51a.js"
   ]
 }
