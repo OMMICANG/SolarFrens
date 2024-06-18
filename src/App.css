@@ -5,9 +5,31 @@ html, body {
   padding: 0;
   height: 100%;
   width: 100%;
-  background-color: black;
-  color: white;
+  background-color: black; /*Default theme */
+  color: white; /* Default theme */
+  /* position: relative; Ensure proper positioning of the overlay */
+  transition: background-color 2s, color 2s; /* Add transition for smooth color change */
 }
+
+/* Overlay for roll-out effect */
+/* body::before { */
+  /* content: ''; */
+  /* position: absolute; */
+  /* top: 0; */
+  /* left: 0; */
+  /* width: 100%; */
+  /* height: 100%; */
+  /* background-color: white; Overlay color */
+  /* z-index: 1; Ensure overlay is above content */
+  /* transform: translateY(-100%); Start off-screen */
+  /* transition: transform 3s; Add transition for roll-out effect */
+/* } */
+
+/* Light theme */
+/* body.light-theme::before { */
+  /* transform: translateY(0); Roll out the overlay */
+/* } */
+
 
 .App {
   display: flex;
@@ -24,16 +46,34 @@ html, body {
   text-align: center;
 }
 
-.sun-container {
+.image-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
+  transition: transform 2s ease-in-out; /* Add transition for smooth image change */
 }
 
-.smiling-sun {
-  width: 150px; /* Adjust size as needed */
+/* Hide the image when transitioning */
+.image-container img.hide {
+  opacity: 0;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: 400px;
+  opacity: 1; /* Start with full opacity */
+  transition: opacity 0.5s ease; /* Add transition for smooth opacity change */
+}
+
+.smiling-sun,
+.dreamy-moon {
+  width: 200px; /* Adjust size as needed */
   height: auto;
+  /* position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); */
 }
 
 button {

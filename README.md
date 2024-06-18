@@ -1,6 +1,12 @@
 # SolarFrens
 SolarFrens Official Mini App
 
+# Credits===>>>
+
+Attributions | Images Used On The App
+
+Sun Img = <a href="https://www.freepik.com/free-ai-image/3d-sun-studio_94546752.htm#fromView=search&page=1&position=28&uuid=37744c97-ac91-4036-9295-185015b18123">Image by freepik</a>
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

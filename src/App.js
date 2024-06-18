@@ -54,13 +54,17 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
+    <header className="App-header">
         <h1>Welcome to SolarFrens</h1>
         <p>
           This is a mini app that runs inside Telegram.
         </p>
-        <div className="sun-container">
-          <img src={require('./Images/smiling-sun.png')} alt="Smiling Sun" className="smiling-sun" />
+        <div className="image-container">
+        {theme === 'dark' ? (
+            <img src={require('./Images/dreamy-moon.png')} alt="Dreamy Moon" className="dreamy-moon" />
+          ) : (
+            <img src={require('./Images/smiling-sun.png')} alt="Smiling Sun" className="smiling-sun" />
+          )}
         </div>
         <button onClick={toggleTheme}>Toggle Theme</button>
       </header>
