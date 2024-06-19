@@ -45,11 +45,11 @@ function App() {
   useEffect(() => {
     // Apply theme styles based on the current theme
     if (theme === 'dark') {
-      document.body.style.backgroundColor = 'black';
+      // document.body.style.backgroundColor = 'black';
       document.body.style.color = 'white';
     } else {
-      document.body.style.backgroundColor = 'white';
-      document.body.style.color = 'black';
+      // document.body.style.backgroundColor = 'white';
+      document.body.style.color = 'goldenrod';
     }
   }, [theme]);
 
@@ -60,18 +60,23 @@ function App() {
 
   return (
     <div className={`App ${theme}-theme`}>
-    <header className="App-header">
+    <div className="overlay">
+      <header className="App-header">
         <h1>Welcome to SolarFrens</h1>
         {/* <p>
           This is a mini app that runs inside Telegram.
         </p> */}
-        <div className="image-container">
-        {showSun ? (
-            <img src={require('./Images/dreamy-moon.png')} alt="Dreamy Moon" className="dreamy-moon" />
-          ) : (
-            <img src={require('./Images/smiling-sun.png')} alt="Smiling Sun" className="smiling-sun" />
-          )}
+        <div className={`image-container ${showSun ? 'dark-border' : 'light-border'}`}>
+        <div className={`double-edge-circle ${showSun ? 'dark-border' : 'light-border'}`}>
+          <div className="center-circle">
+            {showSun ? (
+              <img src={require('./Images/dreamy-moon.png')} alt="Dreamy Moon" className="dreamy-moon" />
+            ) : (
+              <img src={require('./Images/smiling-sun.png')} alt="Smiling Sun" className="smiling-sun" />
+            )}
+          </div>
         </div>
+      </div>
         {/* <button onClick={toggleTheme}>Toggle Theme</button> */}
         {/* <div className="toggle-container">
           <div
@@ -94,6 +99,7 @@ function App() {
             </label>
         </div>
       </header>
+    </div>
     </div>
   );
 }
