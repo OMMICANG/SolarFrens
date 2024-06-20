@@ -13,13 +13,34 @@
     border-radius: 25px;
   }
   
-  .menu-icon {
-    width: 40px; /* Adjust size for mobile view */
+  /* .menu-icon {
+    width: 40px;  /Adjust size for mobile view 
     height: 40px;
   }
-  
-  .menu-icon img {
-    width: 100%;
-    height: auto;
+   */
+
+   .menu-icon {
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
   }
+
+  .menu-icon img {
+    /* width: 100%;
+    height: auto; */
+    width: 30px;
+    height: 30px;
+    transition: transform 0.3s;
+  }
+
+  .menu-icon.active {
+    background-color: rgb(0, 0, 0, .5);
+    border-radius: 10px;
+    padding: 4px 1px 4px 1px;
+  }
+
+  .menu-icon.active img {
+  transform: scale(1.1);
+  filter: invert(100%);
+}
   
