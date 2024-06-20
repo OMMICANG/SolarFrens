@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/SolarFrens/static/css/main.40709be0.css",
-    "main.js": "/SolarFrens/static/js/main.1f3f5665.js",
+    "main.css": "/SolarFrens/static/css/main.6abbb002.css",
+    "main.js": "/SolarFrens/static/js/main.019f7fe6.js",
     "static/media/smiling-sun.png": "/SolarFrens/static/media/smiling-sun.6ad5daab439ed45637fd.png",
     "static/media/dreamy-moon.png": "/SolarFrens/static/media/dreamy-moon.7cd60f05cdd6aa4216ec.png",
     "static/media/Sun.svg": "/SolarFrens/static/media/Sun.681607dcda2a01539a9a8a157ae74e6e.svg",
     "static/media/Moon.svg": "/SolarFrens/static/media/Moon.0a6a2b75ac51157455302ddcfca385c0.svg",
     "index.html": "/SolarFrens/index.html",
-    "main.40709be0.css.map": "/SolarFrens/static/css/main.40709be0.css.map",
-    "main.1f3f5665.js.map": "/SolarFrens/static/js/main.1f3f5665.js.map"
+    "main.6abbb002.css.map": "/SolarFrens/static/css/main.6abbb002.css.map",
+    "main.019f7fe6.js.map": "/SolarFrens/static/js/main.019f7fe6.js.map"
   },
   "entrypoints": [
-    "static/css/main.40709be0.css",
-    "static/js/main.1f3f5665.js"
+    "static/css/main.6abbb002.css",
+    "static/js/main.019f7fe6.js"
   ]
 }
