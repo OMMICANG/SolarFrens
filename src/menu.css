@@ -1,0 +1,25 @@
+.menu {
+    position: fixed;
+    bottom: 0;
+    margin-bottom: 10px;
+    width: 90%;
+    background-color: #242424;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    border: solid darkgoldenrod .5px;
+    border-radius: 25px;
+  }
+  
+  .menu-icon {
+    width: 40px; /* Adjust size for mobile view */
+    height: 40px;
+  }
+  
+  .menu-icon img {
+    width: 100%;
+    height: auto;
+  }
+  

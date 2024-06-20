@@ -46,19 +46,17 @@ html, body {
   align-items: center;
   height: 100%;
   margin: 50px 0;
-  transition: transform 2s ease-in-out; /* Add transition for smooth image change */
+  transition: transform 2s; /* Add transition for smooth image change */
 }
 
-.double-edge-circle {
+.outer-circle {
   display: flex;
   position: relative;
   justify-content: center;
   align-items: center;
   width: 250px;
   height: 250px;
-  /* border: 10px solid transparent; */
   border-radius: 50%;
-  /* background-color: #000; */
 }
 
 .center-circle {
@@ -69,26 +67,47 @@ html, body {
   height: 200px;
   border: 10px solid transparent;
   border-radius: 50%;
+  transition: background-color 2s ease; /* Add transition for smooth image change */
+  position: relative;
 }
 
 .light-border .center-circle {
-  background-color: #fff;
-  transition: background-color 0.5s;
+  background-color: beige;
+  transition: background-color 2s;
+  animation: counter 5s linear infinite;
+}
+@keyframes counter {
+  0% {
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(-360deg);
+  }
 }
 
 .dark-border .center-circle {
   background-color: #000;
-  transition: background-color 0.5s;
+  transition: background-color 2s;
 }
 
-.light-border .double-edge-circle {
-  background-color: goldenrod;
-  transition: background-color 0.5s;
+.light-border .outer-circle {
+  background: linear-gradient(180deg,darkgoldenrod,red,blue);
+  transition: background 2s;
+  animation: rotate 5s linear infinite;
 }
 
-.dark-border .double-edge-circle {
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+.dark-border .outer-circle {
   background-color: #fff;
-  transition: background-color 0.5s;
+  transition: background 2s; 
 }
 
 
@@ -97,54 +116,18 @@ html, body {
   opacity: 0;
 }
 
-/* .image-container img {
-  max-width: 100%;
-  height: 300px;
+.image-container img {
   opacity: 1; /* Start with full opacity */
-  /*transition: opacity 1s ease; /* Add transition for smooth opacity change */
-/*} */
+  transition: opacity 1s; /*Add transition for smooth opacity change */
+}
 
 .smiling-sun,
 .dreamy-moon {
-  width: 70%; /* Adjust size as needed */
-  height: 80%;
-  /* position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%); */
+  width: 98%; /* Adjust size as needed */
+  height: 98%;
+  position: absolute;
+  /* left: 50%; */
+  /* top: 50%; */
+  /* transform: translate(-50%, -50%); */ 
 }
 
-/* .toggle-container { */
-  /* display: flex; */
-  /* justify-content: space-between; */
-  /* align-items: center; */
-  /* width: 100px; Adjust width as needed */
-  /* height: 40px; Adjust height as needed */
-  /* background-color: #ddd; Background color of the container */
-  /* border-radius: 20px; Half of the height for a round shape */
-  /* padding: 2px; Padding to create space between the button and container */
-  /* overflow: hidden; Hide the overflow for smooth sliding effect */
-/* } */
-
-/* .toggle-button { 
-  width: 50px; /* Half of the container width */
-  /* height: 100%;  */
-  /* background-color: #007bff; Default color of the button */
-  /* border-radius: 50%; Round shape */
-  /* transition: transform 1s; Add transition for smooth sliding effect */
-/* } */
-
-
-/* button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-} */
-
-/* button:hover {
-  background-color: #0056b3;
-}  */
