@@ -4,12 +4,13 @@ import './menu.css'; // Import the menu styles
 import "./DarkMode/DarkMode.css"
 import { ReactComponent as Sun } from "./DarkMode/Sun.svg";
 import { ReactComponent as Moon } from "./DarkMode/Moon.svg";
+import CircularProgressBar from './CircularProgressBar';
 
 function App() {
   const [theme, setTheme] = useState('dark'); // Initialize theme state
   const [showSun, setShowSun] = useState(true); // Initialize image state
-  // const [autoToggleTimeout, setAutoToggleTimeout] = useState(null);
-  const [currentPage, setCurrentPage] = useState('home'); // State to track current page
+  const [currentPage, setCurrentPage] = useState(true); // State to track current page
+  const [counter, setCounter] = useState(0); // Initialize counter state
 
   useEffect(() => {
     const handleTelegramInit = () => {
@@ -56,20 +57,6 @@ function App() {
     }
   },[theme]);
 
-      //New Feature Add
-      // const timeout = setTimeout(() => {
-    //     setTheme('dark');
-    //     setShowSun(true);
-    //     document.getElementById('darkmode-toggle').checked = false;  Reset the toggle button
-    //   }, 5000);  Automatically switch back to dark mode after 5 seconds
-    //   setAutoToggleTimeout(timeout);
-    // }
-    // return () => {
-    //   if (autoToggleTimeout) {
-    //     clearTimeout(autoToggleTimeout);
-    //   }
-    // };
-
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === 'dark' ? 'light' : 'dark'));
     setShowSun((prevShowSun) => !prevShowSun);
@@ -82,11 +69,7 @@ function App() {
       document.getElementById('darkmode-toggle').checked = false; // Reset the toggle button
     }, 5000);
   };
-    // New Feature Add
-    // if (autoToggleTimeout) {
-    //   clearTimeout(autoToggleTimeout);
-    //   setAutoToggleTimeout(null);
-    // }
+
     const handleMenuIconClick = (iconIndex) => {
       if (iconIndex === 1) {
         setCurrentPage('home');
@@ -103,11 +86,23 @@ function App() {
     };
   };
 
+  const handleProgressChange = (percentage) => {
+    setCounter(percentage * 2); // Update counter based on percentage
+  };
+
   return (
     <div className={`App ${theme}-theme`}>
     <div className="overlay">
+      <div className="top-horizontal-menu">
+        <div className="menu-item">LOAD | Kw/Hr</div>
+        <div className="menu-item">SP To Level Up</div>
+        <div className="menu-item">Shop</div>
+      </div>
       <header className="App-header">
-        <h1>Welcome to <br/>SolarFrens</h1>
+      <div className="progress-container">
+        <CircularProgressBar onProgressChange={handleProgressChange} />
+        <div className="counter">{counter}</div>
+        </div>
         <div className={`image-container ${showSun ? 'dark-border' : 'light-border'}`}>
         <div className={`outer-circle ${showSun ? 'dark-border' : 'light-border'}`}>
           <div className="center-circle">

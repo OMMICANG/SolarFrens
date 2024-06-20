@@ -1,0 +1,27 @@
+.circular-progress-bar {
+    position: absolute;
+    top: 90px;
+    left: 10px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .progress-ring {
+    transform: rotate(-0deg);
+  }
+  
+  .progress-ring__circle {
+    transition: stroke-dashoffset 0.5s;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+  }
+  
+  .progress-text {
+    position: absolute;
+    font-size: 16px;
+    color: goldenrod;
+  }
+  

@@ -1,3 +1,38 @@
+.top-horizontal-menu {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 10px;
+  width: 80%;
+  padding: 10px;
+}
+
+.menu-item {
+  flex: 1;
+  text-align: center;
+  justify-content: space-between;
+  font-size: 10px;
+  padding: 15px;
+  color: darkgoldenrod;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  margin: 0px 10px 0px 0px;
+}
+
+.menu-item:nth-child(1){
+  padding: 15px;
+}
+
+.menu-item:nth-child(2){
+  padding: 15px;
+}
+.menu-item:nth-child(3){
+  padding: 15px;
+  margin-right: -50px;
+}
+
 .menu {
     position: fixed;
     bottom: 0;
@@ -12,12 +47,6 @@
     border: solid darkgoldenrod .5px;
     border-radius: 25px;
   }
-  
-  /* .menu-icon {
-    width: 40px;  /Adjust size for mobile view 
-    height: 40px;
-  }
-   */
 
    .menu-icon {
     flex: 1;
@@ -26,21 +55,21 @@
   }
 
   .menu-icon img {
-    /* width: 100%;
-    height: auto; */
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s;
+    width: 40px;
+    height: 40px;
   }
 
   .menu-icon.active {
+    margin: 0px 5px 0px 5px;
     background-color: rgb(0, 0, 0, .5);
-    border-radius: 10px;
+    border-radius: 15px;
     padding: 4px 1px 4px 1px;
+    transition: 2s ease;
   }
 
   .menu-icon.active img {
   transform: scale(1.1);
   filter: invert(100%);
+  transition: 2s ease;
 }
   

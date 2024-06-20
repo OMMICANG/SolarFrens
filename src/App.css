@@ -28,15 +28,31 @@ html, body {
   width: 99%;
   height: 100vh;
   position: absolute;
+  justify-content: center;
+  align-items: center;
   top: 10%;
   left: 2px;
   border-top-left-radius: 35px;
   border-top-right-radius: 35px;
-  box-shadow: 0 -5px 20px -5px rgba(255, 215, 0, 0.8);
+  box-shadow: 0 -5px 70px -5px rgba(255, 215, 0, 0.8);
 }
 
 .App-header {
   text-align: center;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.counter {
+  position: absolute;
+  align-self: center;
+  top: 125px;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .image-container {
@@ -47,6 +63,7 @@ html, body {
   height: 100%;
   margin: 50px 0;
   transition: transform 2s; /* Add transition for smooth image change */
+  top: 200px;
 }
 
 .outer-circle {
@@ -54,8 +71,8 @@ html, body {
   position: relative;
   justify-content: center;
   align-items: center;
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
 }
 
@@ -63,8 +80,8 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   border: 10px solid transparent;
   border-radius: 50%;
   transition: background-color 2s ease; /* Add transition for smooth image change */
